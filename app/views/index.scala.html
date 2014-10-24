@@ -1,0 +1,51 @@
+@(message: String)(product: Option[Product])(products: List[Product], productForm: Form[Product])
+
+@import helper._
+
+@main("Welcome to Play") {
+
+    <div class="container">
+
+      <div class="header"> 
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a ng-href="#">Home</a></li>
+          <li><a ng-href="#">About</a></li>
+          <li><a ng-href="#">Contact</a></li>
+        </ul>
+        <h3 class="text-muted">Store</h3>
+      </div>
+
+		<form action="@routes.Application.addProduct()" method="post">
+			<input type="text" name="name" placeholder="josue" required/>
+			<button>Add Product</button>
+		</form>
+
+      <div ng-controller="StoreController as store">  
+          
+        <!--  Products Container  -->
+      <div class="list-group">
+        <!--  Product Container  -->
+        <div class="list-group-item" ng-repeat="product in store.products">
+          <h3>{{product.name}} 
+          		  
+               <form action="{{'/products/delete/' + product.Id}}" method="post">
+          	   		<button id={{product.Id}} class="btn btn-danger">Delete Product</button>
+			   </form>
+            <em class="pull-right">{{product.price | currency}}</em></h3>
+
+          <!-- Image Gallery  -->
+          <product-gallery></product-gallery>
+
+          <!-- Product Tabs  -->
+          <product-tabs></product-tabs>
+        </div>
+
+      </div>
+      </div>
+    </div>
+
+    <!--<div class="footer">
+      <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+    </div>-->
+
+}
