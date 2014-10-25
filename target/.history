@@ -1,0 +1,11 @@
+eclipse
+console
+debug
+compile
+routes.Application.getProducts
+routes.Application.getProducts()
+eclipsify playframeworkapp
+activator -jvm-debug 9999
+compile
+activator dist
+compile

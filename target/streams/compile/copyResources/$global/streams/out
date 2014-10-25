@@ -1,0 +1,6 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(C:\Users\jtorres\Desktop\playframeworkapp-1.0-SNAPSHOT\playfapp\playfapp\conf\application.conf,C:\Users\jtorres\Desktop\playframeworkapp-1.0-SNAPSHOT\playfapp\playfapp\target\scala-2.11\classes\application.conf)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\jtorres\Desktop\playframeworkapp-1.0-SNAPSHOT\playfapp\playfapp\conf\evolutions,C:\Users\jtorres\Desktop\playframeworkapp-1.0-SNAPSHOT\playfapp\playfapp\target\scala-2.11\classes\evolutions)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\jtorres\Desktop\playframeworkapp-1.0-SNAPSHOT\playfapp\playfapp\conf\routes,C:\Users\jtorres\Desktop\playframeworkapp-1.0-SNAPSHOT\playfapp\playfapp\target\scala-2.11\classes\routes)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\jtorres\Desktop\playframeworkapp-1.0-SNAPSHOT\playfapp\playfapp\conf\evolutions\default,C:\Users\jtorres\Desktop\playframeworkapp-1.0-SNAPSHOT\playfapp\playfapp\target\scala-2.11\classes\evolutions\default)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\jtorres\Desktop\playframeworkapp-1.0-SNAPSHOT\playfapp\playfapp\conf\evolutions\default\1.sql,C:\Users\jtorres\Desktop\playframeworkapp-1.0-SNAPSHOT\playfapp\playfapp\target\scala-2.11\classes\evolutions\default\1.sql)[0m
