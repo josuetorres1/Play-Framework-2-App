@@ -28,30 +28,26 @@ create table review (
 
 create sequence image_seq;
 
-create sequence product_seq;
+create sequence users_id_seq;
 
 create sequence review_seq;
 
-alter table product add constraint fk_product_image_1 foreign key (image_id) references image (id) on delete restrict on update restrict;
+alter table product add constraint fk_product_image_1 foreign key (image_id) references image (id);
 create index ix_product_image_1 on product (image_id);
 
 
 
 # --- !Downs
 
-SET REFERENTIAL_INTEGRITY FALSE;
+drop table if exists image cascade;
 
-drop table if exists image;
+drop table if exists product cascade;
 
-drop table if exists product;
-
-drop table if exists review;
-
-SET REFERENTIAL_INTEGRITY TRUE;
+drop table if exists review cascade;
 
 drop sequence if exists image_seq;
 
-drop sequence if exists product_seq;
+drop sequence if exists users_id_seq;
 
 drop sequence if exists review_seq;
 
