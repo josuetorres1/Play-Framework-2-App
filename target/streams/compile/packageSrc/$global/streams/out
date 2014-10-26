@@ -1,0 +1,27 @@
+[0m[[0minfo[0m] [0mPackaging C:\Users\jtorres\Desktop\playframeworkapp-1.0-SNAPSHOT\playfapp\playfapp\target\scala-2.11\playframeworkapp_2.11-1.0-SNAPSHOT-sources.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	application.conf[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\jtorres\Desktop\playframeworkapp-1.0-SNAPSHOT\playfapp\playfapp\conf\application.conf[0m
+[0m[[0mdebug[0m] [0m	models\Image.java[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\jtorres\Desktop\playframeworkapp-1.0-SNAPSHOT\playfapp\playfapp\app\models\Image.java[0m
+[0m[[0mdebug[0m] [0m	evolutions\default[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\jtorres\Desktop\playframeworkapp-1.0-SNAPSHOT\playfapp\playfapp\conf\evolutions\default[0m
+[0m[[0mdebug[0m] [0m	models\Review.java[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\jtorres\Desktop\playframeworkapp-1.0-SNAPSHOT\playfapp\playfapp\app\models\Review.java[0m
+[0m[[0mdebug[0m] [0m	evolutions\default\1.sql[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\jtorres\Desktop\playframeworkapp-1.0-SNAPSHOT\playfapp\playfapp\conf\evolutions\default\1.sql[0m
+[0m[[0mdebug[0m] [0m	models\Product.java[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\jtorres\Desktop\playframeworkapp-1.0-SNAPSHOT\playfapp\playfapp\app\models\Product.java[0m
+[0m[[0mdebug[0m] [0m	routes[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\jtorres\Desktop\playframeworkapp-1.0-SNAPSHOT\playfapp\playfapp\conf\routes[0m
+[0m[[0mdebug[0m] [0m	evolutions[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\jtorres\Desktop\playframeworkapp-1.0-SNAPSHOT\playfapp\playfapp\conf\evolutions[0m
+[0m[[0mdebug[0m] [0m	controllers\JDBC.java[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\jtorres\Desktop\playframeworkapp-1.0-SNAPSHOT\playfapp\playfapp\app\controllers\JDBC.java[0m
+[0m[[0mdebug[0m] [0m	controllers\Data.java[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\jtorres\Desktop\playframeworkapp-1.0-SNAPSHOT\playfapp\playfapp\app\controllers\Data.java[0m
+[0m[[0mdebug[0m] [0m	controllers\Application.java[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\jtorres\Desktop\playframeworkapp-1.0-SNAPSHOT\playfapp\playfapp\app\controllers\Application.java[0m
+[0m[[0mdebug[0m] [0m	db\jdbc\DBase.java[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\jtorres\Desktop\playframeworkapp-1.0-SNAPSHOT\playfapp\playfapp\app\db\jdbc\DBase.java[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m
