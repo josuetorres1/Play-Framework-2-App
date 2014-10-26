@@ -41,6 +41,8 @@ public class Product extends Model{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_seq_gen")
+	@SequenceGenerator(name = "users_seq_gen", sequenceName = "users_id_seq", allocationSize = 1)
 	public Long Id;
 	
 	@Required
