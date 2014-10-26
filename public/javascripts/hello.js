@@ -33,28 +33,28 @@
     app.directive('productDescription', ['$sce', function($sce) {
       return {
         restrict: 'E',
-        templateUrl: $sce.trustAsResourceUrl('http://miprimerapaginaaws.com.s3-website-us-east-1.amazonaws.com/product-description.html'),
+        templateUrl: $sce.trustAsResourceUrl('https://s3.amazonaws.com/miprimerapaginaaws.com/product-description.html'), //http://miprimerapaginaaws.com.s3-website-us-east-1.amazonaws.com/product-description.html
       };
     }]);
 
     app.directive('productReviews', ['$sce', function($sce) {
       return {
         restrict: 'E',
-        templateUrl: $sce.trustAsResourceUrl('http://miprimerapaginaaws.com.s3-website-us-east-1.amazonaws.com/product-reviews.html'),
+        templateUrl: $sce.trustAsResourceUrl('https://s3.amazonaws.com/miprimerapaginaaws.com/product-reviews.html'), //http://miprimerapaginaaws.com.s3-website-us-east-1.amazonaws.com/product-reviews.html
       };
     }]);
 
     app.directive('productSpecs', ['$sce', function($sce) {
       return {
         restrict:'A',
-        templateUrl: $sce.trustAsResourceUrl('http://miprimerapaginaaws.com.s3-website-us-east-1.amazonaws.com/product-specs.html'),
+        templateUrl: $sce.trustAsResourceUrl('https://s3.amazonaws.com/miprimerapaginaaws.com/product-specs.html'), //http://miprimerapaginaaws.com.s3-website-us-east-1.amazonaws.com/product-specs.html
       };
     }]);
 
     app.directive('productTabs', ['$sce', function($sce) {
       return {
         restrict: 'E',
-        templateUrl: $sce.trustAsResourceUrl('http://miprimerapaginaaws.com.s3-website-us-east-1.amazonaws.com/product-tabs.html'),
+        templateUrl: $sce.trustAsResourceUrl('https://s3.amazonaws.com/miprimerapaginaaws.com/product-tabs.html'), //http://miprimerapaginaaws.com.s3-website-us-east-1.amazonaws.com/product-tabs.html
         controller: function() {
           this.tab = 1;
 
@@ -73,7 +73,7 @@
     app.directive('productGallery', ['$sce', function($sce) {
       return {
         restrict: 'E',
-        templateUrl: $sce.trustAsResourceUrl('http://miprimerapaginaaws.com.s3-website-us-east-1.amazonaws.com/product-gallery.html'),
+        templateUrl: $sce.trustAsResourceUrl('https://s3.amazonaws.com/miprimerapaginaaws.com/product-gallery.html'), //http://miprimerapaginaaws.com.s3-website-us-east-1.amazonaws.com/product-gallery.html
         controller: function() {
           this.current = 0;
           this.setCurrent = function(imageNumber){
