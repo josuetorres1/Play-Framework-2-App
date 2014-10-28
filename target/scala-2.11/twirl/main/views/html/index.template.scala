@@ -31,7 +31,12 @@ Seq[Any](format.raw/*1.98*/("""
 """),format.raw/*4.1*/("""
 """),_display_(/*5.2*/main("Welcome to Play")/*5.25*/ {_display_(Seq[Any](format.raw/*5.27*/("""
 
-    """),format.raw/*7.5*/("""<div class="container">
+	"""),format.raw/*7.2*/("""<div class="container">
+    
+    	<div class="jumbotron" style="text-align: center;">
+  			<h1>Enjoy the Play Framework</h1>
+  			<p><a class="btn btn-lg btn-success" ng-href="#">Splendid!!</span></a></p>
+		</div>
 
       <div class="header"> 
         <ul class="nav nav-pills pull-right">
@@ -42,7 +47,7 @@ Seq[Any](format.raw/*1.98*/("""
         <h3 class="text-muted">Store</h3>
       </div>
 
-		<form action=""""),_display_(/*18.18*/routes/*18.24*/.Application.addProduct()),format.raw/*18.49*/("""" method="post">
+		<form action=""""),_display_(/*23.18*/routes/*23.24*/.Application.addProduct()),format.raw/*23.49*/("""" method="post">
 			<input type="text" name="name" placeholder="josue" required/>
 			<button>Add Product</button>
 		</form>
@@ -53,12 +58,12 @@ Seq[Any](format.raw/*1.98*/("""
       <div class="list-group">
         <!--  Product Container  -->
         <div class="list-group-item" ng-repeat="product in store.products">
-          <h3>"""),format.raw/*29.15*/("""{"""),format.raw/*29.16*/("""{"""),format.raw/*29.17*/("""product.name"""),format.raw/*29.29*/("""}"""),format.raw/*29.30*/("""}"""),format.raw/*29.31*/(""" 
+          <h3>"""),format.raw/*34.15*/("""{"""),format.raw/*34.16*/("""{"""),format.raw/*34.17*/("""product.name"""),format.raw/*34.29*/("""}"""),format.raw/*34.30*/("""}"""),format.raw/*34.31*/(""" 
           		  
-               """),format.raw/*31.16*/("""<form action=""""),format.raw/*31.30*/("""{"""),format.raw/*31.31*/("""{"""),format.raw/*31.32*/("""'/products/delete/' + product.Id"""),format.raw/*31.64*/("""}"""),format.raw/*31.65*/("""}"""),format.raw/*31.66*/("""" method="post">
-          	   		<button id="""),format.raw/*32.28*/("""{"""),format.raw/*32.29*/("""{"""),format.raw/*32.30*/("""product.Id"""),format.raw/*32.40*/("""}"""),format.raw/*32.41*/("""}"""),format.raw/*32.42*/(""" """),format.raw/*32.43*/("""class="btn btn-danger">Delete Product</button>
+               """),format.raw/*36.16*/("""<form action=""""),format.raw/*36.30*/("""{"""),format.raw/*36.31*/("""{"""),format.raw/*36.32*/("""'/products/delete/' + product.Id"""),format.raw/*36.64*/("""}"""),format.raw/*36.65*/("""}"""),format.raw/*36.66*/("""" method="post">
+          	   		<button id="""),format.raw/*37.28*/("""{"""),format.raw/*37.29*/("""{"""),format.raw/*37.30*/("""product.Id"""),format.raw/*37.40*/("""}"""),format.raw/*37.41*/("""}"""),format.raw/*37.42*/(""" """),format.raw/*37.43*/("""class="btn btn-danger">Delete Product</button>
 			   </form>
-            <em class="pull-right">"""),format.raw/*34.36*/("""{"""),format.raw/*34.37*/("""{"""),format.raw/*34.38*/("""product.price | currency"""),format.raw/*34.62*/("""}"""),format.raw/*34.63*/("""}"""),format.raw/*34.64*/("""</em></h3>
+            <em class="pull-right">"""),format.raw/*39.36*/("""{"""),format.raw/*39.37*/("""{"""),format.raw/*39.38*/("""product.price | currency"""),format.raw/*39.62*/("""}"""),format.raw/*39.63*/("""}"""),format.raw/*39.64*/("""</em></h3>
 
           <!-- Image Gallery  -->
           <product-gallery></product-gallery>
@@ -75,7 +80,7 @@ Seq[Any](format.raw/*1.98*/("""
       <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
     </div>-->
 
-""")))}),format.raw/*51.2*/("""
+""")))}),format.raw/*56.2*/("""
 """))}
   }
 
@@ -88,11 +93,11 @@ Seq[Any](format.raw/*1.98*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Sun Oct 26 18:29:21 EDT 2014
+                  DATE: Mon Oct 27 22:32:37 EDT 2014
                   SOURCE: C:/Users/jtorres/Desktop/playframeworkapp-1.0-SNAPSHOT/playfapp/playfapp/app/views/index.scala.html
-                  HASH: 84fcbc7263ec5fec8c266f383bb23e726f178962
-                  MATRIX: 767->1|966->97|994->116|1021->118|1052->141|1091->143|1123->149|1484->483|1499->489|1545->514|1960->901|1989->902|2018->903|2058->915|2087->916|2116->917|2176->949|2218->963|2247->964|2276->965|2336->997|2365->998|2394->999|2466->1043|2495->1044|2524->1045|2562->1055|2591->1056|2620->1057|2649->1058|2773->1154|2802->1155|2831->1156|2883->1180|2912->1181|2941->1182|3318->1529
-                  LINES: 26->1|29->1|31->4|32->5|32->5|32->5|34->7|45->18|45->18|45->18|56->29|56->29|56->29|56->29|56->29|56->29|58->31|58->31|58->31|58->31|58->31|58->31|58->31|59->32|59->32|59->32|59->32|59->32|59->32|59->32|61->34|61->34|61->34|61->34|61->34|61->34|78->51
+                  HASH: 000ee9fea8b67392aee18afcff53b0242a49a9c6
+                  MATRIX: 767->1|966->97|994->116|1021->118|1052->141|1091->143|1120->146|1671->670|1686->676|1732->701|2147->1088|2176->1089|2205->1090|2245->1102|2274->1103|2303->1104|2363->1136|2405->1150|2434->1151|2463->1152|2523->1184|2552->1185|2581->1186|2653->1230|2682->1231|2711->1232|2749->1242|2778->1243|2807->1244|2836->1245|2960->1341|2989->1342|3018->1343|3070->1367|3099->1368|3128->1369|3505->1716
+                  LINES: 26->1|29->1|31->4|32->5|32->5|32->5|34->7|50->23|50->23|50->23|61->34|61->34|61->34|61->34|61->34|61->34|63->36|63->36|63->36|63->36|63->36|63->36|63->36|64->37|64->37|64->37|64->37|64->37|64->37|64->37|66->39|66->39|66->39|66->39|66->39|66->39|83->56
                   -- GENERATED --
               */
           
