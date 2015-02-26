@@ -1,21 +1,21 @@
-2014-10-24 19:17:01,921 - [INFO] - from play in pool-4-thread-5 
+2014-11-25 13:44:20,450 - [INFO] - from play in pool-4-thread-3 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2014-10-24 19:17:06,172 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:h2:mem:play
+2014-11-25 13:44:40,307 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in play-internal-execution-context-1 
+Failed to obtain initial connection Sleeping for 0ms and trying again. Attempts left: 0. Exception: null.Message:FATAL: no pg_hba.conf entry for host "76.9.215.2", user "zversfmizdhaoa", database "denf0a1an5aktm", SSL off
 
-2014-10-24 19:17:06,819 - [ERROR] - from application in New I/O worker #1 
+2014-11-25 13:44:40,323 - [ERROR] - from application in New I/O worker #1 
 
 
-! @6k1npo363 - Internal server error, for (GET) [/product] ->
+! @6kal89cm6 - Internal server error, for (GET) [/products] ->
 
-play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
-	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1$$anonfun$apply$1.apply$mcV$sp(Evolutions.scala:510) ~[play-jdbc_2.11-2.3.4.jar:2.3.4]
-	at play.api.db.evolutions.EvolutionsPlugin.withLock(Evolutions.scala:531) ~[play-jdbc_2.11-2.3.4.jar:2.3.4]
-	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:485) ~[play-jdbc_2.11-2.3.4.jar:2.3.4]
-	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:483) ~[play-jdbc_2.11-2.3.4.jar:2.3.4]
-	at scala.collection.immutable.List.foreach(List.scala:383) ~[scala-library-2.11.1.jar:na]
-	at play.api.db.evolutions.EvolutionsPlugin.onStart(Evolutions.scala:483) ~[play-jdbc_2.11-2.3.4.jar:2.3.4]
+play.api.Configuration$$anon$1: Configuration error[Cannot connect to database [default]]
+	at play.api.Configuration$.play$api$Configuration$$configError(Configuration.scala:94) ~[play_2.11-2.3.4.jar:2.3.4]
+	at play.api.Configuration.reportError(Configuration.scala:743) ~[play_2.11-2.3.4.jar:2.3.4]
+	at play.api.db.BoneCPPlugin$$anonfun$onStart$1.apply(DB.scala:247) ~[play-jdbc_2.11-2.3.4.jar:2.3.4]
+	at play.api.db.BoneCPPlugin$$anonfun$onStart$1.apply(DB.scala:238) ~[play-jdbc_2.11-2.3.4.jar:2.3.4]
+	at scala.collection.immutable.List.map(List.scala:274) ~[scala-library-2.11.1.jar:na]
+	at play.api.db.BoneCPPlugin.onStart(DB.scala:238) ~[play-jdbc_2.11-2.3.4.jar:2.3.4]
 	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.4.jar:2.3.4]
 	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.4.jar:2.3.4]
 	at scala.collection.immutable.List.foreach(List.scala:383) ~[scala-library-2.11.1.jar:na]
@@ -39,8 +39,26 @@ play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evoluti
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
+Caused by: org.postgresql.util.PSQLException: FATAL: no pg_hba.conf entry for host "76.9.215.2", user "zversfmizdhaoa", database "denf0a1an5aktm", SSL off
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:293) ~[postgresql-9.1-901-1.jdbc4.jar:na]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:108) ~[postgresql-9.1-901-1.jdbc4.jar:na]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:66) ~[postgresql-9.1-901-1.jdbc4.jar:na]
+	at org.postgresql.jdbc2.AbstractJdbc2Connection.<init>(AbstractJdbc2Connection.java:125) ~[postgresql-9.1-901-1.jdbc4.jar:na]
+	at org.postgresql.jdbc3.AbstractJdbc3Connection.<init>(AbstractJdbc3Connection.java:30) ~[postgresql-9.1-901-1.jdbc4.jar:na]
+	at org.postgresql.jdbc3g.AbstractJdbc3gConnection.<init>(AbstractJdbc3gConnection.java:22) ~[postgresql-9.1-901-1.jdbc4.jar:na]
+	at org.postgresql.jdbc4.AbstractJdbc4Connection.<init>(AbstractJdbc4Connection.java:32) ~[postgresql-9.1-901-1.jdbc4.jar:na]
+	at org.postgresql.jdbc4.Jdbc4Connection.<init>(Jdbc4Connection.java:24) ~[postgresql-9.1-901-1.jdbc4.jar:na]
+	at org.postgresql.Driver.makeConnection(Driver.java:393) ~[postgresql-9.1-901-1.jdbc4.jar:na]
+	at org.postgresql.Driver.connect(Driver.java:267) ~[postgresql-9.1-901-1.jdbc4.jar:na]
+	at java.sql.DriverManager.getConnection(DriverManager.java:664) ~[na:1.8.0_20]
+	at java.sql.DriverManager.getConnection(DriverManager.java:247) ~[na:1.8.0_20]
+	at com.jolbox.bonecp.BoneCP.obtainRawInternalConnection(BoneCP.java:363) ~[bonecp-0.8.0.RELEASE.jar:na]
+	at com.jolbox.bonecp.BoneCP.<init>(BoneCP.java:416) ~[bonecp-0.8.0.RELEASE.jar:na]
+	at com.jolbox.bonecp.BoneCPDataSource.getConnection(BoneCPDataSource.java:120) ~[bonecp-0.8.0.RELEASE.jar:na]
+	at play.api.db.BoneCPPlugin$$anonfun$onStart$1.apply(DB.scala:240) ~[play-jdbc_2.11-2.3.4.jar:2.3.4]
+	... 26 common frames omitted
 
-2014-10-24 19:17:08,812 - [WARN] - from play in play-internal-execution-context-1 
+2014-11-25 13:44:53,426 - [WARN] - from play in pool-4-thread-3 
 Error stopping plugin
 java.lang.NullPointerException: null
 	at play.libs.ws.ning.NingWSPlugin.onStop(NingWSPlugin.java:31) ~[play-java-ws_2.11-2.3.4.jar:2.3.4]
@@ -55,25 +73,25 @@ java.lang.NullPointerException: null
 	at play.api.Play$$anonfun$stop$1.apply(Play.scala:105) [play_2.11-2.3.4.jar:2.3.4]
 	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
 	at play.api.Play$.stop(Play.scala:105) [play_2.11-2.3.4.jar:2.3.4]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:142) [play_2.11-2.3.4.jar:2.3.4]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.4.jar:2.3.4]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.4.jar:2.3.4]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.4.jar:2.3.4]
-	at scala.util.Success.flatMap(Try.scala:230) [scala-library-2.11.1.jar:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.4.jar:2.3.4]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) [play_2.11-2.3.4.jar:2.3.4]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
-
-2014-10-24 19:17:08,948 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:h2:mem:play
-
-2014-10-24 19:17:09,161 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
+	at play.core.server.NettyServer.stop(NettyServer.scala:158) [play_2.11-2.3.4.jar:2.3.4]
+	at play.PlayRun$$anon$3.close(PlayRun.scala:332) [sbt-plugin-2.3.4.jar:2.3.4]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3.apply(PlayRun.scala:150) [sbt-plugin-2.3.4.jar:2.3.4]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3.apply(PlayRun.scala:95) [sbt-plugin-2.3.4.jar:2.3.4]
+	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) [scala-library.jar:0.13.5]
+	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:42) [collections-0.13.5.jar:0.13.5]
+	at sbt.std.Transform$$anon$4.work(System.scala:64) [task-system-0.13.5.jar:0.13.5]
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:237) [tasks-0.13.5.jar:0.13.5]
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:237) [tasks-0.13.5.jar:0.13.5]
+	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:18) [control-0.13.5.jar:0.13.5]
+	at sbt.Execute.work(Execute.scala:244) [tasks-0.13.5.jar:0.13.5]
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:237) [tasks-0.13.5.jar:0.13.5]
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:237) [tasks-0.13.5.jar:0.13.5]
+	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:160) [tasks-0.13.5.jar:0.13.5]
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:30) [tasks-0.13.5.jar:0.13.5]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_20]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_20]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_20]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_20]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_20]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_20]
 
