@@ -32,7 +32,6 @@ public class Application extends Controller {
 		
 	public static Result index(){
 		return ok(index.render("test", null, Product.all(), pro));
-		//return ok(index.render("test", null));
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -57,7 +56,7 @@ public class Application extends Controller {
     	}
     	else{
     		Product product = boundForm.get();
-    		Image existOne = new Image(); //Image.find.where().eq("", "").findUnique();
+    		Image existOne = new Image(); 
     		
     		if (existOne != null){
     			product.image = existOne;
